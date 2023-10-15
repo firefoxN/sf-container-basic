@@ -41,7 +41,7 @@ RUN apk del --no-cache ${PHPIZE_DEPS} \
 COPY --from=composer /usr/bin/composer /usr/local/bin/composer
 
 # XDebug wrapper
-COPY ./docker/xdebug/xdebug /usr/local/bin/xdebug
+COPY ./xdebug/xdebug /usr/local/bin/xdebug
 RUN chmod +x /usr/local/bin/xdebug
 
 # Clean up image
